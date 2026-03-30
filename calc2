@@ -1,0 +1,31 @@
+while True:
+    num1 = float(input("Enter first number: "))
+    what_2_do = input("Enter operation (+, -, *, /): ")
+    num2 = float(input("Enter second number: "))
+
+    if what_2_do == "+":
+        result = num1 + num2
+    elif what_2_do == "-":
+        result = num1 - num2
+    elif what_2_do == "*":
+        result = num1 * num2
+    elif what_2_do == "/":
+        if num2 == 0:
+            result = "Don't fool around, you can't divide by zero"
+        else:
+            result = num1 / num2
+    else:
+        result = "Unknown operation"
+
+    print(result)
+
+    choice = input("Do you want to calculate again? (y/n): ").lower()
+
+    if choice in ["n", "no"]:
+        print("Calculator stopped")
+        break
+    elif choice in ["y", "yes"]:
+        pass
+    else:
+        print("Invalid input")
+        break
